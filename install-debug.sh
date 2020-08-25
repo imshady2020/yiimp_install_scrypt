@@ -372,7 +372,7 @@
     
     # Compil Blocknotify
     cd ~
-    git clone https://github.com/tpruvot/yiimp
+    git clone -b Kudaraidee https://github.com/Kudaraidee/yiimp.git
     cd $HOME/yiimp/blocknotify
     sudo sed -i 's/tu8tu5/'$blckntifypass'/' blocknotify.cpp
     sudo make
@@ -1006,34 +1006,34 @@
     
     define('"'"'YAAMP_LIMIT_ESTIMATE'"'"', false);
     
-    define('"'"'YAAMP_FEES_MINING'"'"', 0.5);
-    define('"'"'YAAMP_FEES_EXCHANGE'"'"', 2);
+    define('"'"'YAAMP_FEES_MINING'"'"', 0.25);
+    define('"'"'YAAMP_FEES_EXCHANGE'"'"', 3);
     define('"'"'YAAMP_FEES_RENTING'"'"', 2);
     define('"'"'YAAMP_TXFEE_RENTING_WD'"'"', 0.002);
     
-    define('"'"'YAAMP_PAYMENTS_FREQ'"'"', 2*60*60);
+    define('"'"'YAAMP_PAYMENTS_FREQ'"'"', 1*60*60);
     define('"'"'YAAMP_PAYMENTS_MINI'"'"', 0.001);
     
-    define('"'"'YAAMP_ALLOW_EXCHANGE'"'"', false);
+    define('"'"'YAAMP_ALLOW_EXCHANGE'"'"', true);
     define('"'"'YIIMP_PUBLIC_EXPLORER'"'"', true);
-    define('"'"'YIIMP_PUBLIC_BENCHMARK'"'"', false);
+    define('"'"'YIIMP_PUBLIC_BENCHMARK'"'"', true);
     
     define('"'"'YIIMP_FIAT_ALTERNATIVE'"'"', '"'"'USD'"'"'); // USD is main
     define('"'"'YAAMP_USE_NICEHASH_API'"'"', false);
     
-    define('"'"'YAAMP_BTCADDRESS'"'"', '"'"'1C1hnjk3WhuAvUN6Ny6LTxPD3rwSZwapW7'"'"');
+    define('"'"'YAAMP_BTCADDRESS'"'"', '"'"'1Me6D7FNHiPq4WQYMVHYSNujfAWxpoNQjQ'"'"');
     
     define('"'"'YAAMP_SITE_URL'"'"', '"'"''"${server_name}"''"'"');
     define('"'"'YAAMP_STRATUM_URL'"'"', YAAMP_SITE_URL); // change if your stratum server is on a different host
-    define('"'"'YAAMP_SITE_NAME'"'"', '"'"'YIIMP'"'"');
+    define('"'"'YAAMP_SITE_NAME'"'"', '"'"'The Swimming Pool'"'"');
     define('"'"'YAAMP_ADMIN_EMAIL'"'"', '"'"''"${EMAIL}"''"'"');
-    define('"'"'YAAMP_ADMIN_IP'"'"', '"'"''"${Public}"''"'"'); // samples: "80.236.118.26,90.234.221.11" or "10.0.0.1/8"
+    define('"'"'YAAMP_ADMIN_IP'"'"', '"'"''"${Public}"''"'"'); // samples: "24.217.124.24,000.000.000.000" or ""0.000.00.0/0
     
     define('"'"'YAAMP_ADMIN_WEBCONSOLE'"'"', true);
-    define('"'"'YAAMP_CREATE_NEW_COINS'"'"', false);
-    define('"'"'YAAMP_NOTIFY_NEW_COINS'"'"', false);
+    define('"'"'YAAMP_CREATE_NEW_COINS'"'"', true);
+    define('"'"'YAAMP_NOTIFY_NEW_COINS'"'"', true);
     
-    define('"'"'YAAMP_DEFAULT_ALGO'"'"', '"'"'x11'"'"');
+    define('"'"'YAAMP_DEFAULT_ALGO'"'"', '"'"'neoscrypt'"'"');
     
     define('"'"'YAAMP_USE_NGINX'"'"', true);
     
@@ -1055,16 +1055,16 @@
     define('"'"'EXCH_NOVA_KEY'"'"', '"'"''"'"');
     
     // Automatic withdraw to Yaamp btc wallet if btc balance > 0.3
-    define('"'"'EXCH_AUTO_WITHDRAW'"'"', 0.3);
+    define('"'"'EXCH_AUTO_WITHDRAW'"'"', 0.0);
     
     // nicehash keys deposit account & amount to deposit at a time
     define('"'"'NICEHASH_API_KEY'"'"','"'"'f96c65a7-3d2f-4f3a-815c-cacf00674396'"'"');
-    define('"'"'NICEHASH_API_ID'"'"','"'"'825979'"'"');
-    define('"'"'NICEHASH_DEPOSIT'"'"','"'"'3ABoqBjeorjzbyHmGMppM62YLssUgJhtuf'"'"');
-    define('"'"'NICEHASH_DEPOSIT_AMOUNT'"'"','"'"'0.01'"'"');
+    define('"'"'NICEHASH_API_ID'"'"','"'"'0000'"'"');
+    define('"'"'NICEHASH_DEPOSIT'"'"','"'"'000xx'"'"');
+    define('"'"'NICEHASH_DEPOSIT_AMOUNT'"'"','"'"'0.00'"'"');
     
     $cold_wallet_table = array(
-    '"'"'1PqjApUdjwU9k4v1RDWf6XveARyEXaiGUz'"'"' => 0.10,
+    '"'"'bc1qqn59h568furate64wy9lad0lsnhymyn9meex65'"'"' => 0.10,
     );
     
     // Sample fixed pool fees
@@ -1076,7 +1076,7 @@
     
     // Sample custom stratum ports
     $configCustomPorts = array(
-    //  '"'"'x11'"'"' => 7000,
+    //  '"'"'neoscrypt'"'"' => 6900,
     );
     
     // mBTC Coefs per algo (default is 1.0)
